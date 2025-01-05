@@ -1,0 +1,217 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: White;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: white;
+  text-align: center;
+
+  font-style: italic;
+}
+
+.cd-logo {
+  background-image: url("https://i.ibb.co/mC4xgkx/Ireland.png");
+  min-height: 100%;
+  background-size: auto;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #2e6409;
+  background-size: cover;
+  min-height: 100%;
+  background-attachment: fixed;
+}
+
+.picSection1,
+.picSection2,
+.picSection3,
+.picSection5 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #2e6409;
+  background-size: cover;
+  min-height: 100%;
+  background-attachment: fixed;
+  opacity: 0.7;
+}
+
+.textSection {
+  background-color: #719b25;
+  padding: 50px 80px;
+}
+
+.textSection p {
+  text-align: center;
+}
+
+.picSection1 {
+  background-image: url("https://i.ibb.co/DfWtxKB/ireland-2.jpg");
+}
+
+.picSection2 {
+  background-image: url("https://i.ibb.co/QvLhcVn/ireland-1.jpg");
+}
+
+.picSection3 {
+  background-image: url("https://i.ibb.co/9ZM1dqb/ireland-3.jpg");
+}
+
+.picSection5 {
+  background-image: url("");
+}
+
+.caption {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+.textSection4 {
+  background-image: url("https://i.ibb.co/582PtJC/ireland-4.jpg");
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #2e6409;
+  background-size: cover;
+  min-height: 100%;
+  background-attachment: fixed;
+  opacity: 0.7;
+  padding: 50px 80px;
+}
+
+.textSection4 p {
+  text-align: center;
+}
+
+.caption4 {
+  position: absolute;
+  width: 85%;
+  top: 40%;
+}
+
+.border4 {
+  background-color: #cbe368;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  opacity: 0.85;
+}
+
+.border4 h3 {
+  color: black;
+}
+
+.border {
+  background-color: #cbe368;
+  color: White;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .cd-logo,
+  .picSection1,
+  .picSection2,
+  .picSection3,
+  .picSection4 {
+    background-attachment: scroll;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
