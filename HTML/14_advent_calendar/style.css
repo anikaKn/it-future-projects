@@ -1,0 +1,71 @@
+body {
+  font-size: 25px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.calendar {
+  width: 100%;
+  margin: 10px auto;
+}
+.day {
+  margin: 10px;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 25%;
+  height: 300px;
+  text-align: center;
+  background: #02cfc3;
+  border: 5px solid #6afff6;
+}
+.day img.image {
+  text-align: center;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+.day:hover img.image {
+  display: none;
+}
+.day img.hover {
+  display: none;
+}
+.day:hover img.hover {
+  display: inline;
+  text-align: center;
+}
+
+.day:hover p {
+  display: none;
+}
+
+.day p.hover {
+  display: none;
+}
+.day:hover p.hover {
+  display: inline;
+  text-align: center;
+}
+
+.winter {
+  background: #3dd9fc;
+  border: 5px solid #326fa8;
+}
+
+.spring {
+  background: #34eb9b;
+  border: 5px solid #13784c;
+}
+
+.summer {
+  background: #f5e836;
+  border: 5px solid #fcd432;
+}
+
+.fall {
+  background: #fc6132;
+  border: 5px solid #fc863d;
+}
