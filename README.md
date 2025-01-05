@@ -1,2 +1,3 @@
 # it-future-projects
-Projects to learn programming with kids
+Щоб побачити проєти у WEB: 
+https://anikakn.github.io/it-future-projects/index.html
