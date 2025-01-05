@@ -4,7 +4,9 @@ body {
   background-repeat: repeat-y;
   background-attachment: fixed;
   background-size: cover;
+  background-image: url("https://img.freepik.com/free-vector/abstract-watercolor-background_23-2149038179.jpg?semt=ais_hybrid");
 }
+
 
 .calendar {
   width: 100%;
