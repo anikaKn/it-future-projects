@@ -1,0 +1,101 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: White;
+}
+
+.cd-logo {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #642580;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.cd-logo {
+  background-image: url("https://images.unsplash.com/photo-1596910547037-846b1980329f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  min-height: 100%;
+  background-size: auto;
+  opacity: 1;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.textSection {
+  background-color: #642580;
+  padding: 50px 80px;
+}
+
+.picSection1 {
+  background-image: url("https://images.unsplash.com/photo-1604752466548-d452d280fd7a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBvdGF0b3xlbnwwfHwwfHx8MA%3D%3D");
+}
+
+.cd-logo,
+.picSection1 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #642580;
+  background-size: cover;
+  min-height: 100%;
+
+  background-attachment: fixed;
+  opacity: 0.7;
+}
+
+.picSection2 {
+  background-image: url("https://images.unsplash.com/photo-1552845683-cfefc701e423?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.cd-logo,
+.picSection2 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #642580;
+  background-size: cover;
+  min-height: 100%;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+
+.picSection3 {
+  background-image: url("https://images.unsplash.com/photo-1570700326774-ccc863636d6e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBvdGF0b3xlbnwwfHwwfHx8MA%3D%3D");
+}
+
+.cd-logo,
+.picSection3 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #642580;
+  background-size: cover;
+  min-height: 100%;
+  background-attachment: fixed;
+  opacity: 0.9;
+}
+
+.caption {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  opacity: 60%;
+}
+
+.border {
+  background-color: #41bac1;
+  color: White;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}

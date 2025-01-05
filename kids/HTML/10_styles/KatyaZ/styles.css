@@ -1,0 +1,44 @@
+h1 {
+  text-align: center;
+  color: black;
+  background: #015418;
+  padding: 10px;
+}
+
+body{
+background: linear-gradient(to bottom right, #8bc69b, #000000);
+  padding: 15px;
+}
+
+.col1{
+  width: 48%;
+  float: left;
+}
+
+.col2{
+  width: 48%;
+  float: right;
+}
+
+img {
+max-widht: 90%
+}
+
+.photo{
+  box-shadow: 8px 8px 8px gray;
+  transform: rotare(5deg);
+  width: 70%;
+}
+
+h2 {
+  color: white;
+  background: teal;
+  text-align: center;
+  paddingL 5px;
+  box-shadow: 2px 2px 2px gray;
+}
+
+.item {
+  border: 3px dashed teal;
+  margin: 30px;
+}

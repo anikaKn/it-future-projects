@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(
+    330deg,
+    #743C3C 0%,
+    #202344  25%,
+    #004D40  50%,
+    #AA6629  75%,
+    #3F302D 100%
+  );
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid white;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    /* The mask-image gives us some extra fading. It is not necessary but without this, you can't face out the box-shadows. This clips our menu */
+    mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  width: 28%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: #38124F;
+  padding: 22px 16px;
+  width: 160%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+  wigth: 20px;
+  text-shadow: 1px 1px #491568
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+/*   background-color: #ddd; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+/*   background-color: #ccc; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 60%;
+  border-left: none;
+/*   height: 300px; */
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.link {
+  margin: 3px;
+  padding: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
+  text-shadow: 1px 1px #491568;
+}
+
+.link img {
+  height:50px;
+  wigth:50px;
+}
+.a
+ text-decoration: none; 
+
+  

@@ -1,0 +1,176 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: White;
+}
+.picSection1 {
+  background-image: url("https://miro.medium.com/v2/resize:fit:2000/1*AOSHKbMTFftpzZwKOFJdSg.jpeg");
+}
+
+.picSection2 {
+  background-image: url("https://www.abbeysupply.com/res/Rif%20airsoft");
+}
+
+.picSection3 {
+  background-image: url("https://airsofteire.com/cdn/shop/files/p_main_230602040806_2000x1008.jpg?v=1705065859");
+}
+.picSection4 {
+  background-image: url("https://www.silverback-airsoft.com/wp-content/uploads/2022/07/TAC-41A-3S.jpg");
+}
+
+.cd-logo,
+.picSection1,
+.picSection2,
+.picSection3,
+.picSection4 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #642580;
+  background-size: cover;
+  min-height: 100%;
+  background-attachment: fixed;
+  opacity: 1;
+}
+
+.cd-logo {
+  background-image: url("https://miro.medium.com/v2/resize:fit:2000/1*AOSHKbMTFftpzZwKOFJdSg.jpeg");
+  min-height: 100%;
+  background-size: auto;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.textSection {
+  background-color: #000;
+  padding: 50px 80px;
+}
+
+.caption {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+.border {
+  background-color: #000;
+  color: White;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  opacity: 0.7;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-device-width: 1024px) {
+  .cd-logo,
+  .picSection1,
+  .picSection2,
+  .picSection3,
+  .picSection4 {
+    background-attachment: scroll;
+  }
+}

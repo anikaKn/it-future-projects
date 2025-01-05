@@ -1,0 +1,72 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: White;
+}
+
+.cd-logo,
+.picSection1,
+.picSection2 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #772707;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.cd-logo {
+  background-image: url("https://img.freepik.com/premium-photo/green-tea-hd-8k-wall-paper-stock-photographic-image_1030895-19197.jpg");
+  opacity: 0.9;
+  min-height: 100%;
+  background-size: 600px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.textSection {
+  background-color: #304090;
+  padding: 50px 80px;
+  opacity: 0.9;
+}
+
+.picSection1 {
+  background-image: url("https://img.freepik.com/premium-photo/autumn-tea-hd-8k-wallpaper-stock-photographic-image_871881-21179.jpg");
+  opacity: 0.9;
+}
+
+.picSection2 {
+  background-image: url("https://img.freepik.com/premium-photo/autumn-tea-hd-8k-wallpaper-stock-photographic-image_853645-65665.jpg");
+}
+
+.caption {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+.border {
+  background-color: #678560;
+  color: White;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  opacity: 0.8;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .cd-logo,
+  .picSection1,
+  .picsection2 {
+    background-attachment: scroll;
+  }
+}
