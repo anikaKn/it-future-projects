@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>PetCube</h2>
+    <form>
+      <label>Ім'я власника:</label>
+      <input type="text" id="name" name="name" placeholder="Введіть своє ім'я"> <br>
+      <label>Ім'я улюбленця:</label>
+      <input type="text" id="pame" name="pname" placeholder="Введіть ім'я улюбленця"> <br>
+    
+      <select name="pets" id="petselect">
+        <option value="">Обери улюбленця</value>
+        <option value="dog">Собачка</value>
+        <option value="cat">Котик</value>
+        <option value="ant">Мураха</value>
+        <option value="hamster">Хом'як</value>
+        <option value="racoon">Єнот</value>
+        <option value="snake">Змія</value>
+        <option value="elefant">Слон</value>
+        <option value="spider">Павук</value>
+      </select>
+      <br>
+    
+      <h3> Оберіть дію</h3>
+      <input type="radio" id="camera" value="camera" name="action">
+      <label>Включи онлайн камеру</label><br>
+      <input type="radio" id="data" value="data" name="action">
+      <label>Подивитися дані про активність</label><br>
+      <input type="radio" id="play" value="play" name="action">
+      <label> Пограти</label><br>
+    
+     <h3> Оберіть </h3>
+      <input type="checkbox" id="GPS" value="GPS" name="option">
+      <label>Включити GPS-трекер</label><br>
+      <input type="checkbox" id="fence" value="fence" name="option">
+      <label>Поставити віртувальний паркан</label><br>
+      <input type="checkbox" id="light" value="light" name="option">
+      <label>Включити підсвітку</label><br>
+     <h3> Дані улюбленця: </h3>
+    <textarea name="t" rows="10" cols="30"> </textarea>
+      <br>
+      <button type="button" onclick="alert('Гав!!!Мяу!!!')">ОК !!!</button>
+    </form>
+  </body>
+</html>

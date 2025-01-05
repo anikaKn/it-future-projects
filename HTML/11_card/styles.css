@@ -1,0 +1,90 @@
+body {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+   background-image: linear-gradient(#fb44cc, #ffe173, #ff6292, #fb44cc);
+}
+
+.card {
+  background-color: transparent;
+  width: 75%;
+
+  height: 100vh;
+/*   height: fit-content; */
+/*   height: 100vh; */
+/*   min-height: 500px; */
+/* overflow: hidden; */
+
+/*   height: fit-content; */
+/*   min-height: 500px;  */
+/*   height: auto; */
+/*    height: auto;
+  min-height: 100vh !important; */
+/*   display: block;
+overflow: auto; */
+  perspective: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: auto;
+    display: block;
+overflow: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+    border: 3px solid red;
+}
+
+.card-front {
+  background-color: #ff2989;
+  color: black;
+}
+
+.card-back {
+  background-color: #ffe173;
+  color: red;
+  transform: rotateY(180deg);
+}
+
+.heart  {
+  width: 250px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  --_m: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
+  -webkit-mask-box-image: var(--_m);
+  mask-border: var(--_m);
+  clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+}
+
+/* fallback until better support for mask-border */
+@supports not (-webkit-mask-box-image: var(--_m)) {
+  .heart  {
+    --_m: radial-gradient(at 70% 31%, #000 29%, #0000 30%),
+      radial-gradient(at 30% 31%, #000 29%, #0000 30%),
+      linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+  }
+}
+
+img {
+  max-height: 50%;
+  max-width: 100%;
+  object-fit: contain;
+}
