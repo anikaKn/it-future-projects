@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Герої Хогвартса</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #e8f5e9;
+        text-align: center;
+        padding: 30px;
+      }
+
+      h2 {
+        color: #2e7d32;
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+
+      #cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .card {
+        background: linear-gradient(135deg, #ffbb33, #ff4081);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 220px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .card h3 {
+        margin: 10px 0;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+        margin: 5px 0;
+        line-height: 1.5;
+      }
+
+      .card p strong {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .patronus-img {
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .quidditch-emoji {
+        font-size: 1.5rem;
+        margin-left: 10px;
+      }
+
+      .card p,
+      .card h3 {
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+      }
+
+      .card h3 {
+        animation-delay: 0.2s;
+      }
+
+      .card p {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Герої Хогвартса</h2>
+    <div id="cards"></div>
+
+    <script>
+      class Hero {
+        constructor(
+          name,
+          house,
+          wand,
+          imageUrl,
+          isQuidditchPlayer,
+          patronus,
+          patronusImageUrl
+        ) {
+          this.name = name;
+          this.house = house;
+          this.wand = wand;
+          this.imageUrl = imageUrl;
+          this.isQuidditchPlayer = isQuidditchPlayer;
+          this.patronus = patronus;
+          this.patronusImageUrl = patronusImageUrl;
+        }
+
+        parseltongue() {
+          return this.name
+            .replace(/а/g, "🐍")
+            .replace(/о/g, "🦎")
+            .replace(/е/g, "🪱")
+            .replace(/і/g, "🕷")
+            .replace(/т/g, "🦗")
+            .replace(/р/g, "🦂");
+        }
+
+        showCharacterInfo() {
+          const parseltongueName = this.parseltongue();
+          const quidditchEmoji = this.isQuidditchPlayer ? "⚡" : ""; // Смайлик для гравців квідичу
+          return `
+          <div class="card">
+            <img src="${this.imageUrl}" alt="${this.name}" />
+            <h3>${parseltongueName} ${quidditchEmoji}</h3> <!-- Ім'я мовою парселтангу -->
+            <p><strong>Факультет:</strong> ${this.house}</p>
+            <p><strong>Паличка:</strong> ${this.wand}</p>
+            <p><strong>Квідич:</strong> ${
+              this.isQuidditchPlayer ? "Грав(ла)" : "Не грав(ла)"
+            }</p>
+            <p><strong>Патронус:</strong> ${this.patronus}</p>
+            <img class="patronus-img" src="${this.patronusImageUrl}" alt="${
+            this.patronus
+          }" />
+          </div>
+        `;
+        }
+      }
+
+      const heroes = [
+        new Hero(
+          "Гаррі Поттер",
+          "Грифіндор",
+          'Омела, 11", феніксове перо',
+          "https://upload.wikimedia.org/wikipedia/en/d/d7/Harry_Potter_character_poster.jpg",
+          true,
+          "Оленя",
+          "https://images.cults3d.com/55RH9rTHD8bxoTL_VfSq_OIeoxc=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/25030729/illustration-file/13ab0185-d226-4949-ae6e-92fede90cbc6/Patronus.jpg"
+        ),
+        new Hero(
+          "Герміона Ґрейнджер",
+          "Грифіндор",
+          'Виноградна лоза, 10¾", серце дракона',
+          "https://upload.wikimedia.org/wikipedia/en/d/d3/Hermione_Granger_poster.jpg",
+          false,
+          "Охоронець",
+          "https://avatars.dzeninfra.ru/get-zen_doc/1540250/pub_64e47046190abf206acb26f3_64e475b90ac0f562c307da85/scale_1200"
+        ),
+        new Hero(
+          "Рон Візлі",
+          "Грифіндор",
+          'Верба, 14", єдинорожа волосина',
+          "https://upload.wikimedia.org/wikipedia/en/5/5e/Ron_Weasley_poster.jpg",
+          true,
+          "Кінь",
+          "https://avatars.dzeninfra.ru/get-zen_doc/1895227/pub_64e47046190abf206acb26f3_64e47a6f8eb2553ff790ed16/scale_1200"
+        ),
+        new Hero(
+          "Драко Малфой",
+          "Слизерин",
+          'Глог, 10", єдинорожа волосина',
+          "https://avatars.dzeninfra.ru/get-zen_doc/1588093/pub_62ff98bd4ab9c9468d9197b6_62ff994d7e5b6e4fa8cf7366/scale_1200",
+          true,
+          "Дракон",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyhhq8iKX5hm6xBn2uJ610T0iZKo9Lb6Kopw&s"
+        ),
+        new Hero(
+          "Луна Лавґуд",
+          "Рейвенклов",
+          'Кипарис, 13¾", волосина єдинорога',
+          "https://pm1.aminoapps.com/7740/19ccd6d474e572eac8b9cee9e03adbd5634c3334r1-736-1092v2_hq.jpg",
+          false,
+          "Зайчик",
+          "https://avatars.mds.yandex.net/get-shedevrum/11079990/be424845b3e611ee87ea6eed827e143e/orig"
+        ),
+        new Hero(
+          "Сіверус Снейп",
+          "Слизерин",
+          "Не вказано",
+          "https://repost.uz/storage/uploads/0-1733378378-redactor%20life-post-material.jpeg",
+          false,
+          "Тінь",
+          "https://sun9-32.userapi.com/impg/AQn-2HVGP51x60fLJbIfwZw0SKr2Tgwk8t6bNA/8CJdHrj4c3A.jpg?size=500x350&quality=96&sign=0fd3fe830795e7c9b3edefbb225e2837&type=album"
+        ),
+      ];
+
+      const cardsDiv = document.getElementById("cards");
+      heroes.forEach((hero) => {
+        cardsDiv.innerHTML += hero.showCharacterInfo();
+      });
+    </script>
+  </body>
+</html>
