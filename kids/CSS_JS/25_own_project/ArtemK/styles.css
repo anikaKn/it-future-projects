@@ -1,0 +1,222 @@
+body {
+  width: 1000px;
+}
+.list-flex li {
+  list-style: none;
+  padding: 0px 0px 10px 0px;
+  margin-right: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.list-flex li {
+  width: 300px;
+  margin-bottom: 20px;
+  background-color: #fff4e0;
+}
+
+.list-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-contetnt: space-between;
+  text-align: center;
+}
+
+.list-flex table {
+  margin: 0 auto;
+  width: 250px;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  width: 40%;
+  height: 30px;
+}
+
+th,
+td {
+  border-bottom: 2px solid rgb(208, 64, 55);
+}
+
+tr:nth-child(2) th,
+tr:nth-child(2) td {
+  border-color: rgb(43, 152, 203);
+}
+
+tr:nth-child(3) th,
+tr:nth-child(3) td {
+  border-color: rgb(227, 165, 74);
+}
+
+tr:nth-child(4) th,
+tr:nth-child(4) td {
+  border-color: rgb(114, 180, 76);
+}
+tr:nth-child(5) th,
+tr:nth-child(5) td {
+  border-color: rgb(287, 165, 743);
+}
+
+#list-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#list-header p {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.sort {
+  width: 150px;
+  border-radius: 30px;
+  height: 40px;
+  font-size: 1.025em;
+  font-weight: bold;
+  border: none;
+  color: white;
+  background-color: rgb(208, 64, 55);
+}
+
+.sort-price {
+  background-color: rgb(43, 152, 203);
+}
+
+.sort-produced {
+  background-color: rgb(227, 165, 74);
+}
+
+.sort-tag {
+  background-color: rgb(114, 180, 76);
+}
+
+.sort-value {
+  background-color: rgb(287, 165, 743);
+}
+.sort:focus {
+  outline: none;
+}
+.sort:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content: "";
+  position: relative;
+  top: -10px;
+  right: -5px;
+}
+.sort.asc:after {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  content: "";
+  position: relative;
+  top: 4px;
+  right: -5px;
+}
+.sort.desc:after {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  content: "";
+  position: relative;
+  top: -4px;
+  right: -5px;
+}
+.pagination {
+  display: flex;
+}
+.pagination li {
+  list-style: none;
+  border: 1px solid #555;
+  margin-right: 10px;
+}
+
+.pagination li a {
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  color: #000;
+  transition: 0.5s;
+}
+
+.pagination li a:hover,
+.pagination li a:focus {
+  background-color: #555;
+  color: #fff;
+}
+
+.pagination .active a {
+  background-color: #555;
+  color: #fff;
+  pointer-events: none;
+}
+img.top {
+  height: 25px;
+  width: auto;
+}
+
+.advertisement {
+  text-align: center;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 1%,
+    rgba(204, 195, 152, 1) 50%,
+    rgba(236, 233, 126, 1) 100%
+  );
+  position: fixed;
+  width: 80%;
+  height: 60%;
+  top: 21%;
+  left: 12%;
+  padding: 1%;
+}
+
+.photo {
+  display: block;
+}
+.img1 {
+  width: 30%;
+}
+.img1:hover {
+  display: none;
+}
+
+.img3 {
+  width: 30%;
+}
+.img3:hover {
+  border: solid 5px black;
+}
+.imageBox {
+  position: relative;
+  float: left;
+}
+
+.imageBox .hoverImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.imageBox:hover .hoverImg {
+  display: block;
+}
