@@ -1,134 +1,240 @@
-function getRate(currency) { if (currency === "USD") return 1; if (currency ===
-"EUR") return 0.95; if (currency === "UAH") return 41.5; if (currency === "VND")
-return 616.79; return null; } function convert() { const amount =
-parseFloat(document.getElementById("amount").value); const from =
-document.getElementById("from").value; const fromRate = getRate(from); const to
-= document.getElementById("to").value; const toRate = getRate(to); if
-(isNaN(amount) || amount <= 0) { document.getElementById("result").textContent =
-"Введіть суму"; return; } if (fromRate === null || toRate === null) {
-document.getElementById("result").textContent = "Помилка!"; return; } const
-result = (amount / fromRate) * toRate;
-document.getElementById("result").textContent = `Результат ${result.toFixed( 2
-)} ${to}`; } function calculateDeposit() { const deposit =
-parseFloat(document.getElementById("depositAmount").value); const term =
-parseInt(document.getElementById("depositTerm").value); const rate =
-parseFloat(document.getElementById("interestRate").value) / 100; if (
-isNaN(deposit) || deposit <= 0 || isNaN(term) || term <= 0 || isNaN(rate) ||
-rate <= 0 ) { document.getElementById("depositResult").textContent = "Введіть
-коректні дані"; return; } const profit = (deposit * rate * term) / 12; const
-total = deposit + profit; document.getElementById( "depositResult" ).textContent
-= `Отримаєте: ${profit.toFixed(2)} UAH; Всього: ${total.toFixed( 2 )} UAH`; }
-function getConversionRate(unit) { if (unit === "km") return 1; if (unit ===
-"mile") return 0.621371; if (unit === "m") return 1000; if (unit === "cm")
-return 100000; return null; } function convertUnits() { const amount =
-parseFloat(document.getElementById("unitAmount").value); const from =
-document.getElementById("unitFrom").value; const fromRate =
-getConversionRate(from); const to = document.getElementById("unitTo").value;
-const toRate = getConversionRate(to); if (isNaN(amount) || amount <= 0) {
-document.getElementById("unitResult").textContent = "Введіть коректну суму";
-return; } if (fromRate === null || toRate === null) {
-document.getElementById("unitResult").textContent = "Помилка!"; return; } const
-result = (amount * fromRate) / toRate; document.getElementById( "unitResult"
-).textContent = `Результат: ${result.toFixed(2)} ${to}`; } function
-convertTime() { const seconds =
-parseFloat(document.getElementById("seconds").value); if (isNaN(seconds) ||
-seconds < 0) { document.getElementById("timeResult").textContent = "Введіть
-коректну кількість секунд"; return; } const hours = Math.floor(seconds / 3600);
-const minutes = Math.floor((seconds % 3600) / 60); const remainingSeconds =
-Math.floor(seconds % 60); document.getElementById( "timeResult" ).textContent =
-`Результат: ${hours} г ${minutes} хв ${remainingSeconds} с`; } function
-calculateDiscount() { const initialPrice = parseFloat(
-document.getElementById("initialPrice").value ); const discountPercent =
-parseFloat( document.getElementById("discountPercent").value ); if (
-isNaN(initialPrice) || initialPrice <= 0 || isNaN(discountPercent) ||
-discountPercent < 0 ) { document.getElementById("discountResult").textContent =
-"Введіть коректні дані"; return; } const discountAmount = (initialPrice *
-discountPercent) / 100; const finalPrice = initialPrice - discountAmount;
-document.getElementById( "discountResult" ).textContent = `Знижка:
-${discountAmount.toFixed( 2 )}; Фінальна ціна: ${finalPrice.toFixed(2)}`; }
-function updateShapeInputs() { const shape =
-document.getElementById("shape").value; const shapeInputs =
-document.getElementById("shapeInputs"); shapeInputs.innerHTML = ""; if (shape
-=== "circle") { shapeInputs.innerHTML = `
-<label for="radius">Радіус:</label>
-<input
-  type="number"
-  id="radius"
-  aria-labelledby="title"
-  aria-describedby="radius-help"
-  autofocus
-/>
-<br />
-<small id="radius-help">Введіть радіус кола</small>
-`; } else if (shape === "square") { shapeInputs.innerHTML = `
-<label for="side">Сторона:</label>
-<input
-  type="number"
-  id="side"
-  aria-labelledby="title"
-  aria-describedby="side-help"
-  autofocus
-/>
-<br />
-<small id="side-help">Введіть довжину сторони квадрата</small>
-`; } else if (shape === "rectangle") { shapeInputs.innerHTML = `
-<label for="length">Довжина:</label>
-<input
-  type="number"
-  id="length"
-  aria-labelledby="title"
-  aria-describedby="length-help"
-  autofocus
-/>
-<br />
-<small id="length-help">Введіть довжину прямокутника</small>
-<br />
-<label for="width">Ширина:</label>
-<input
-  type="number"
-  id="width"
-  aria-labelledby="title"
-  aria-describedby="width-help"
-/>
-<br />
-<small id="width-help">Введіть ширину прямокутника</small>
-`; } } function calculateArea() { const shape =
-document.getElementById("shape").value; let area; if (shape === "circle") {
-const radius = parseFloat(document.getElementById("radius").value); if
-(isNaN(radius) || radius <= 0) {
-document.getElementById("areaResult").textContent = "Введіть коректний радіус";
-return; } area = Math.PI * radius * radius; } else if (shape === "square") {
-const side = parseFloat(document.getElementById("side").value); if (isNaN(side)
-|| side <= 0) { document.getElementById("areaResult").textContent = "Введіть
-коректну довжину сторони"; return; } area = side * side; } else if (shape ===
-"rectangle") { const length =
-parseFloat(document.getElementById("length").value); const width =
-parseFloat(document.getElementById("width").value); if (isNaN(length) || length
-<= 0 || isNaN(width) || width <= 0) {
-document.getElementById("areaResult").textContent = "Введіть коректні значення
-для довжини та ширини"; return; } area = length * width; }
-document.getElementById("areaResult").textContent = `Площа: ${area.toFixed( 2
-)}`; } function calculateHypotenuse() { const sideA =
-parseFloat(document.getElementById("sideA").value); const sideB =
-parseFloat(document.getElementById("sideB").value); if (isNaN(sideA) || sideA <=
-0 || isNaN(sideB) || sideB <= 0) {
-document.getElementById("hypotenuseResult").textContent = "Введіть коректні
-значення для сторін A та B"; return; } const hypotenuse = Math.sqrt(sideA *
-sideA + sideB * sideB); document.getElementById( "hypotenuseResult"
-).textContent = `Гіпотенуза: ${hypotenuse.toFixed(2)}`; } function
-calculateDiscriminant() { const a =
-parseFloat(document.getElementById("a").value); const b =
-parseFloat(document.getElementById("b").value); const c =
-parseFloat(document.getElementById("c").value); if (isNaN(a) || isNaN(b) ||
-isNaN(c)) { document.getElementById("discriminantResult").textContent = "Введіть
-коректні значення для a, b і c";
-document.getElementById("rootsResult").textContent = ""; return; } const
-discriminant = b * b - 4 * a * c; document.getElementById( "discriminantResult"
-).textContent = `Дискримінант: ${discriminant.toFixed(2)}`; if (discriminant >
-0) { const x1 = (-b + Math.sqrt(discriminant)) / (2 * a); const x2 = (-b -
-Math.sqrt(discriminant)) / (2 * a); document.getElementById( "rootsResult"
-).textContent = `Корені: x1 = ${x1.toFixed(2)}, x2 = ${x2.toFixed(2)}`; } else
-if (discriminant === 0) { const x = -b / (2 * a); document.getElementById(
-"rootsResult" ).textContent = `Корінь: x = ${x.toFixed(2)}`; } else {
-document.getElementById( "rootsResult" ).textContent = `Коренів немає
-(дискримінант менший за 0)`; } }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Конвертор валют</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <img
+      src="https://dilova.com.ua/wp-content/uploads/2019/05/dollar.jpg"
+      alt="Картинка з грошима"
+    />
+    <div class="container">
+      <h1 id="title">Конвертор валют</h1>
+      <label for="amount">Сума:</label>
+      <input
+        type="number"
+        id="amount"
+        aria-labelledby="title"
+        aria-describedby="amount-help"
+        autofocus
+      />
+      <br />
+      <small id="amount-help">Введіть суму для конвертації</small>
+      <br />
+      <label for="from"> З:</label>
+      <select id="from">
+        <option value="USD">Долар</option>
+        <option value="EUR">Євро</option>
+        <option value="UAH">Гривня</option>
+        <option value="VND">В'єтнамський донг</option>
+      </select>
+      <br />
+      <label for="to"> В:</label>
+      <select id="to">
+        <option value="USD">Долар</option>
+        <option value="EUR">Євро</option>
+        <option value="UAH">Гривня</option>
+        <option value="VND">В'єтнамський донг</option>
+      </select>
+      <br />
+      <button onclick="convert()">Конвертувати</button>
+      <h2 id="result" aria-live="polite">Результат:</h2>
+    </div>
+
+    <div class="container">
+      <h1>Розрахунок відсотків за депозитом</h1>
+      <label for="depositAmount">Сума:</label>
+      <input
+        type="number"
+        id="depositAmount"
+        aria-labelledby="title"
+        aria-describedby="depositAmount-help"
+        autofocus
+      />
+      <br />
+      <small id="depositAmount-help"
+        >Введіть суму яку хочете покласти на депозит</small
+      >
+      <br />
+      <label for="depositTerm">Термін (в місяцях):</label>
+      <input
+        type="number"
+        id="depositTerm"
+        aria-labelledby="title"
+        aria-describedby="depositTerm-help"
+      />
+      <br />
+      <small id="depositTerm-help">Введіть термін в місяцях</small>
+      <br />
+      <label for="interestRate">Відсоткова ставка (%):</label>
+      <input
+        type="number"
+        id="interestRate"
+        aria-labelledby="title"
+        aria-describedby="interestRate-help"
+      />
+      <br />
+      <small id="interestRate-help">Введіть відсоткову ставку</small>
+      <button onclick="calculateDeposit()">Обчислити</button>
+      <h2 id="depositResult" aria-live="polite">Результат:</h2>
+    </div>
+
+    <div class="container">
+      <h1>Калькулятор одиниць виміру</h1>
+      <label for="unitAmount">Довжина:</label>
+      <input
+        type="number"
+        id="unitAmount"
+        aria-labelledby="title"
+        aria-describedby="unitAmount-help"
+        autofocus
+      />
+      <br />
+      <small id="unitAmount-help">Введіть довжину для конвертації</small>
+      <br />
+      <label for="unitFrom">З:</label>
+      <select id="unitFrom">
+        <option value="km">Кілометр</option>
+        <option value="mile">Миля</option>
+        <option value="m">Метр</option>
+        <option value="cm">Сантиметр</option>
+      </select>
+      <br />
+      <label for="unitTo">В:</label>
+      <select id="unitTo">
+        <option value="km">Кілометр</option>
+        <option value="mile">Миля</option>
+        <option value="m">Метр</option>
+        <option value="cm">Сантиметр</option>
+      </select>
+      <br />
+      <button onclick="convertUnits()">Конвертувати</button>
+      <h2 id="unitResult" aria-live="polite">Результат:</h2>
+    </div>
+
+    <div class="container">
+      <h1>Конвертер часу</h1>
+      <label for="seconds">Секунди:</label>
+      <input
+        type="number"
+        id="seconds"
+        aria-labelledby="title"
+        aria-describedby="seconds-help"
+        autofocus
+      />
+      <br />
+      <small id="seconds-help">Введіть кількість секунд</small>
+      <br />
+      <button onclick="convertTime()">Конвертувати</button>
+      <h2 id="timeResult" aria-live="polite">Результат:</h2>
+    </div>
+
+    <div class="container">
+      <h1>Розрахунок знижки</h1>
+      <label for="initialPrice">Початкова ціна:</label>
+      <input
+        type="number"
+        id="initialPrice"
+        aria-labelledby="title"
+        aria-describedby="initialPrice-help"
+        autofocus
+      />
+      <br />
+      <small id="initialPrice-help">Введіть початкову ціну</small>
+      <br />
+      <label for="discountPercent">Знижка (%):</label>
+      <input
+        type="number"
+        id="discountPercent"
+        aria-labelledby="title"
+        aria-describedby="discountPercent-help"
+      />
+      <br />
+      <small id="discountPercent-help">Введіть відсоток знижки</small>
+      <br />
+      <button onclick="calculateDiscount()">Обчислити</button>
+      <h2 id="discountResult" aria-live="polite">Результат:</h2>
+    </div>
+
+    <div class="container">
+      <h1>Розрахунок площі фігур</h1>
+      <label for="shape">Фігура:</label>
+      <select id="shape" onchange="updateShapeInputs()">
+        <option value="circle">Круг</option>
+        <option value="square">Квадрат</option>
+        <option value="rectangle">Прямокутник</option>
+      </select>
+      <br />
+      <div id="shapeInputs"></div>
+      <button onclick="calculateArea()">Обчислити</button>
+      <h2 id="areaResult" aria-live="polite">Результат:</h2>
+    </div>
+
+    <div class="container">
+      <h1>Розрахунок гіпотенузи</h1>
+      <label for="sideA">Сторона A:</label>
+      <input
+        type="number"
+        id="sideA"
+        aria-labelledby="title"
+        aria-describedby="sideA-help"
+        autofocus
+      />
+      <br />
+      <small id="sideA-help">Введіть довжину сторони A</small>
+      <br />
+      <label for="sideB">Сторона B:</label>
+      <input
+        type="number"
+        id="sideB"
+        aria-labelledby="title"
+        aria-describedby="sideB-help"
+      />
+      <br />
+      <small id="sideB-help">Введіть довжину сторони B</small>
+      <button onclick="calculateHypotenuse()">Обчислити</button>
+      <h2 id="hypotenuseResult" aria-live="polite">Результат:</h2>
+    </div>
+
+    <div class="container">
+      <h1>Знаходження дискримінанта</h1>
+      <label for="a">a:</label>
+      <input
+        type="number"
+        id="a"
+        aria-labelledby="title"
+        aria-describedby="a-help"
+        autofocus
+      />
+      <br />
+      <small id="a-help">Введіть коефіцієнт a</small>
+      <br />
+      <label for="b">b:</label>
+      <input
+        type="number"
+        id="b"
+        aria-labelledby="title"
+        aria-describedby="b-help"
+      />
+      <br />
+      <small id="b-help">Введіть коефіцієнт b</small>
+      <br />
+      <label for="c">c:</label>
+      <input
+        type="number"
+        id="c"
+        aria-labelledby="title"
+        aria-describedby="c-help"
+      />
+      <br />
+      <button onclick="calculateDiscriminant()">Обчислити</button>
+      <h2 id="discriminantResult" aria-live="polite">Результат:</h2>
+      <h2 id="rootsResult" aria-live="polite">Корені:</h2>
+    </div>
+  </body>
+</html>
