@@ -1,0 +1,55 @@
+h1 {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  background: #cce7ff;
+}
+#game {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.unicorn {
+  width: 50px;
+  height: 50px;
+  background: url("https://pnghunter.com/get-logo.php?id=30780") no-repeat
+    center/contain;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.irs {
+  width: 50px;
+  height: 50px;
+  background: url("https://www.vhv.rs/dpng/d/358-3582180_irs-hd-png-download.png")
+    no-repeat center/contain;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.rainbow {
+  width: 40px;
+  height: 40px;
+  background: url("https://spng.pngfind.com/pngs/s/70-707748_free-icons-png-public-gold-bar-20g-transparent.png")
+    /* I haven't found a single non-fake png  */ no-repeat center/contain;
+  position: absolute;
+}
+.dollar {
+  width: 40px;
+  height: 40px;
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/be02a4e3-e357-4bde-b048-3a8a59e11d49/d2mcev3-5ac40603-bd13-49ed-b235-859ee4fd46cb.png/v1/fill/w_1095,h_730/diamond_transparent_png_by_absurdwordpreferred_d2mcev3-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU3MSIsInBhdGgiOiJcL2ZcL2JlMDJhNGUzLWUzNTctNGJkZS1iMDQ4LTNhOGE1OWUxMWQ0OVwvZDJtY2V2My01YWM0MDYwMy1iZDEzLTQ5ZWQtYjIzNS04NTllZTRmZDQ2Y2IucG5nIiwid2lkdGgiOiI8PTIzNTYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.RYQWVpnaLAUqD1sz-kCdGYfm8BBBkmpoUNfoZ0qLirU")
+    no-repeat center/contain;
+  position: absolute;
+}
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+}
