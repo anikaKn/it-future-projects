@@ -26,8 +26,7 @@ body {
 .irs {
   width: 50px;
   height: 50px;
-  background: url("https://www.vhv.rs/dpng/d/358-3582180_irs-hd-png-download.png")
-    no-repeat center/contain;
+  background: url("irs.jpg") no-repeat center/contain;
   position: absolute;
   bottom: 20px;
   left: 50%;
