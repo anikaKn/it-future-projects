@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  background: url("https://www.orangesmile.com/common/img_city_maps/miami-map-3.jpg");
+}
+#game {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.arthur {
+  width: 50px;
+  height: 50px;
+  background: url("https://upload.wikimedia.org/wikipedia/en/c/c7/ArthurMitchellDexter.jpg")
+    no-repeat center/contain;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dexter {
+  width: 40px;
+  height: 40px;
+  background: url("https://m.media-amazon.com/images/M/MV5BOTZhNTdlOTMtZGU4YS00NTIxLTk1MzMtYjk5OWQyYzMxOGFjXkEyXkFqcGc@._V1_QL75_UY281_CR131,0,190,281_.jpg   ")
+    no-repeat center/contain;
+  position: absolute;
+}
+.rita {
+  width: 40px;
+  height: 40px;
+  background: url("https://static.tvmaze.com/uploads/images/medium_portrait/0/2229.jpg ")
+    no-repeat center/contain;
+  position: absolute;
+}
+.enemy {
+  width: 40px;
+  height: 40px;
+  background: url("https://preview.redd.it/sik3i5f3sfu91.jpg?auto=webp&s=383b266924359cbc1528ce0fefdb19b845d3c78c ")
+    no-repeat center/contain;
+  position: absolute;
+}
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+}

@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  background: #cce7ff;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d87b0f4-ae26-4b18-835c-af3a7ce1349f/ddc5r18-8c10d7aa-9796-432a-bf4a-9dbb6386f5ab.png/v1/fill/w_946,h_726,q_80,strp/bikini_bottom_background_by_happaxgamma_ddc5r18-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzI2IiwicGF0aCI6IlwvZlwvNGQ4N2IwZjQtYWUyNi00YjE4LTgzNWMtYWYzYTdjZTEzNDlmXC9kZGM1cjE4LThjMTBkN2FhLTk3OTYtNDMyYS1iZjRhLTlkYmI2Mzg2ZjVhYi5wbmciLCJ3aWR0aCI6Ijw9OTQ2In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.WJVGxsZzBXrWw_brVaR5TaFT43Rthc3SyTpONIHpPT0");
+}
+#game {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.squidward {
+  width: 100px;
+  height: 50px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Squidward_Tentacles.svg/110px-Squidward_Tentacles.svg.png")
+    no-repeat center/contain;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.patrick {
+  width: 40px;
+  height: 40px;
+  background: url("https://static.wikitide.net/loathsomecharacterswiki/thumb/f/f6/C--Users-cleme-Downloads-527-5274029_patrick-star-clipart-patrick-star-drooling-png-download.png/300px-C--Users-cleme-Downloads-527-5274029_patrick-star-clipart-patrick-star-drooling-png-download.png")
+    no-repeat center/contain;
+  position: absolute;
+}
+.spongebob {
+  width: 40px;
+  height: 40px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/7/7a/SpongeBob_SquarePants_character.png")
+    no-repeat center/contain;
+  position: absolute;
+}
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+}
