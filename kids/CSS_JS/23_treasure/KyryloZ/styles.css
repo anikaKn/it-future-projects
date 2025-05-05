@@ -1,0 +1,25 @@
+#map {
+  width: 310px;
+  height: 310px;
+  background-image: url("map1.png");
+  background-size: cover;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 10px;
+  cursor: crosshair;
+}
+
+#message {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+h1,
+p {
+  text-align: center;
+  color: aliceblue;
+}
+
+body {
+  background-color: lightskyblue;
+}
