@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Currency conventor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <h1>Conventors</h1>
+    <div class="container">
+      <img
+        src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW9uZXl8ZW58MHx8MHx8fDA%3D"
+        alt="Picture with money"
+        width="150px"
+      />
+      <h1 id="title">Currency conventor</h1>
+      <label for="amount">Amount:</label>
+      <input
+        type="number"
+        id="amount"
+        aria-labelledby="title"
+        aria-describedby="amount-help"
+        autofocus
+      />
+      <br />
+      <small id="amount-help">Enter the amount to convert</small>
+      <br />
+      <label for="from">From: </label>
+      <select id="from">
+        <option value="USD">US dollar</option>
+        <option value="EUR">Euro</option>
+        <option value="UAH">Ukrainian hryvnia</option>
+        <option value="GBP">Pound sterling</option>
+        <option value="JPY">Japanese yen</option>
+      </select>
+      <label for="to">To: </label>
+      <select id="to">
+        <option value="USD">US dollar</option>
+        <option value="EUR">Euro</option>
+        <option value="UAH">Ukrainian hryvnia</option>
+        <option value="GBP">Pound sterling</option>
+        <option value="JPY">Japanese yen</option>
+      </select>
+      <br />
+      <button onclick="convert()">Convert</button>
+      <h2 id="result" aria-live="polite">Result:</h2>
+    </div>
+
+    <div class="container">
+      <img
+        src="https://uainfo.org/static/ckef/img/image1_36.jpg"
+        alt="Picture with money"
+        width="150px"
+      />
+      <h1 id="title">Deposit at 7%</h1>
+      <label for="deposit">Amount:</label>
+      <input
+        type="number"
+        id="deposit"
+        aria-labelledby="title"
+        aria-describedby="deposite-help"
+        autofocus
+      />
+      <br />
+      <small id="deposit-help">Enter the amount you want to deposit</small>
+      <br />
+      <label for="termin">Term:</label>
+      <input
+        type="number"
+        id="termin"
+        aria-labelledby="title"
+        aria-describedby="termin-help"
+        autofocus
+      />
+      <br />
+      <small id="termin-help"
+        >Enter the term in months for which you want to deposit money</small
+      >
+      <br />
+      <button onclick="deposit_convert()">Calculate</button>
+      <h2 id="deposit_result" aria-live="polite">Result:</h2>
+    </div>
+
+    <div class="container">
+      <img
+        src="https://otome.com.ua/image/catalog/news/sale_.png"
+        alt="Sale picture"
+        width="150px"
+      />
+      <h1 id="title">Discount calculation</h1>
+      <label for="price">Price:</label>
+      <input
+        type="number"
+        id="price"
+        aria-labelledby="title"
+        aria-describedby="price-help"
+        autofocus
+      />
+      <br />
+      <small id="price-help">Enter the starting price of the product</small>
+      <br />
+      <label for="percent">Percent:</label>
+      <input
+        type="number"
+        id="percent"
+        aria-labelledby="title"
+        aria-describedby="percent-help"
+        autofocus
+      />
+      <br />
+      <small id="percent-help">Enter the discount in percentage.</small>
+      <br />
+      <button onclick="calculate_discount()">Calculate</button>
+      <h2 id="discount_result" aria-live="polite">Result:</h2>
+    </div>
+  </body>
+</html>

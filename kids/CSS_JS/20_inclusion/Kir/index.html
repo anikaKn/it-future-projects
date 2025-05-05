@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Конвертор валют</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-rQKPi5Gj2J9mV9zhpj1UtsnDuBykJUiK7kRqH_hsaEjtsgN_XHpH_IUkzD8b1bi_mxw&usqp=CAU"
+      alt="Картинка з грошима"
+      height="100px"
+    />
+    <div class="container">
+      <h1>Конвертор валют</h1>
+      <label for="amount"> Сума: </label>
+      <input
+        type="number"
+        id="amount"
+        aria-labelledby="title"
+        aria-describedby="amount-help"
+        autofocus
+      />
+      <br />
+      <small id="amount-help">Insert convertation value</small>
+      <br />
+      <label for="from"> From: </label>
+      <select id="from">
+        <option value="USD">Dollah</option>
+        <option value="EUR">Euroh</option>
+        <option value="UAH">Gryvnyah</option>
+        <option value="FIM">Markkah</option>
+      </select>
+      <label for="to"> To: </label>
+      <select id="to">
+        <option value="USD">Dollah</option>
+        <option value="EUR">Euroh</option>
+        <option value="UAH">Gryvnyah</option>
+        <option value="FIM">Markkah</option>
+      </select>
+      <button onclick="convert()">Convert</button>
+      <h2 id="result" aria-live="polite">Result:</h2>
+    </div>
+    <div class="container">
+      <h1>Deposit under 1%</h1>
+      <label for="deposit"> Summ: </label>
+      <input
+        type="number"
+        id="deposit"
+        aria-labelledby="title"
+        aria-describedby="deposit-help"
+        autofocus
+      />
+      <br />
+      <small id="amount-help">Insert amount to deposit</small>
+      <button onclick="deposit()">Convert</button>
+      <h2 id="resultdep" aria-live="polite">Result:</h2>
+    </div>
+    <div class="container">
+      <h1>Area of a figure</h1>
+      <label for="side_a"> Side A: </label>
+      <input
+        type="number"
+        id="side_a"
+        aria-labelledby="title"
+        aria-describedby="deposit-help"
+        autofocus
+      />
+      <br />
+      <label for="side_b"> Side B (useless if square): </label>
+      <input
+        type="number"
+        id="side_b"
+        aria-labelledby="title"
+        aria-describedby="deposit-help"
+        autofocus
+      />
+      <br />
+      <input type="radio" id="square" name="areatype" value="0" checked />
+      <label for="square">Square</label><br />
+      <input type="radio" id="rectangle" name="areatype" value="1" />
+      <label for="rectangle">Rectangle</label><br />
+      <br />
+      <small id="amount-help">Choose the type of an area</small>
+      <button onclick="areafun()">Convert</button>
+      <h2 id="resultarea" aria-live="polite">Result:</h2>
+    </div>
+  </body>
+</html>
