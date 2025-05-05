@@ -1,0 +1,61 @@
+body {
+  background-color: #222;
+  color: white;
+}
+
+.navbar-inverse {
+  background-color: black;
+  border: none;
+}
+
+.jumbotron {
+  background-color: #333;
+  color: white;
+  padding: 50px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.skeleton-container {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  height: 550px;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skeleton-container:hover {
+  transform: scale(1.1);
+}
+
+.skeleton-img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.fact-box {
+  background-color: #555;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.modal {
+  display: block !important;
+}
+
+@media screen and (max-width: 768px) {
+  .col-md-4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

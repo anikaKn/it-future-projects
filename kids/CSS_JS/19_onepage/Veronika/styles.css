@@ -1,0 +1,51 @@
+ {
+  font: 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #f5f6f7;
+}
+p {
+  font-size: 16px;
+}
+.margin {
+  margin-bottom: 45px;
+}
+.bg-1 {
+  background-color: #c6a25f; /* Green */
+  color: #5c2903;
+}
+.bg-2 {
+  background-color: #714f0e; /* Dark Blue */
+  color: #ffffff;
+}
+.bg-3 {
+  background-color: #c0924c; /* White */
+  color: #3b2403;
+}
+.bg-4 {
+  background-color: #c7a87b; /* Black Gray */
+  color: #fff;
+}
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+.navbar-nav li a:hover {
+  color: #1abc9c !important;
+}
+.col-sm-4 img {
+  width: 250px; /* Розмір квадрата (змініть за потреби) */
+  height: 250px;
+  object-fit: cover; /* Забезпечує рівномірне заповнення без спотворень */
+  display: block;
+  margin: 0 auto; /* Центрує зображення */
+  border-radius: 10px; /* Додає трохи округлення кутів (опціонально) */
+}

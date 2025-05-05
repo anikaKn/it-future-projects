@@ -1,0 +1,81 @@
+h1 {
+  text-decoration: underline;
+}
+
+body {
+  font: 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #f5f6f7;
+}
+p {
+  font-size: 16px;
+}
+.margin {
+  margin-bottom: 45px;
+}
+.bg-1 {
+  background-color: #d1b684; 
+  color: #555555;
+}
+.bg-2 {
+  background-color: #e6cfac; 
+  color: #555555;
+}
+.bg-3 {
+  background-color: #d1b684; 
+  color: #555555;
+}
+.bg-4 {
+  background-color: #555555; 
+  color: #fff;
+}
+.bg-5 {
+  background-color: #e6cfac; 
+  color: #555555;
+}
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+  background-color: #2f2f2f;
+}
+.navbar-nav li a:hover {
+  color: #d3cca5 !important;
+}
+
+.navbar-nav li a:hover{
+  color: #d1b684;
+}
+
+
+img{
+  width="350"
+  height="350"
+  style="display: inline"
+}
+
+
+.col-sm-4 img {
+  display: block;
+  margin: 0 auto; /* Центрує зображення */
+  border-radius: 10px; /* Додає трохи округлення кутів (опціонально) */
+}
+
+.carousel {
+  margin: 20px;
+}
+
+
+.item{
+  width: 1200px;  /* Розмір квадрата (змініть за потреби) */
+  height: 400px;
+  object-fit: cover; /* Забезпечує рівномірне заповнення без спотворень */
+}
