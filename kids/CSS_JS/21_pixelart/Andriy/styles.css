@@ -1,0 +1,99 @@
+h1 {
+  text-decoration: underline;
+}
+#art {
+  display: table;
+  border-spacing: 1px;
+  border: 5px solid black;
+}
+.row {
+  display: table-row;
+}
+body {
+  background-color: blueviolet;
+}
+.pixel {
+  display: table-cell;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+}
+.penbc {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border: 2px solid black;
+}
+.penw {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid black;
+}
+.peny {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+  border: 2px solid black;
+}
+.peng {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  border: 2px solid black;
+}
+.penr {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border: 2px solid black;
+}
+.penbl {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(2, 91, 255);
+  border: 2px solid black;
+}
+.bordbc {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 6px solid black;
+}
+.bordw {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 6px solid white;
+}
+.bordy {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 6px solid yellow;
+}
+.bordg {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 6px solid green;
+}
+.bordr {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 6px solid red;
+}
+.bordbl {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 6px solid rgb(2, 91, 255);
+}
