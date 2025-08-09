@@ -1,0 +1,8 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+.bb {
+  padding: 15px;
+  background: linear-gradient(#75307e, #a369ab, #c0a7c3 ) ;
+}
