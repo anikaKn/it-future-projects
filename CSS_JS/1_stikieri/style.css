@@ -1,0 +1,43 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20190831/pngtree-pastel-colorful-background-clouds-image_312444.jpg");
+}
+.sticker {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 5px;
+}
+#ua{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Courier New";
+  color:yellow;
+  background: linear-gradient(red, #666666);
+  padding: 50px 30px;
+  border-radius: 20px;   
+}
+
+#home{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Impact";
+  color:yellow;
+  background: linear-gradient(to botom left  , red, violet);
+  padding: 20px 30px;
+  border-radius: 20px;   
+  text-shadow: 5px 5px blue;
+}
+#a1{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Impact";
+  color:yellow;
+  background-image: url("https://img.freepik.com/free-vector/abstract-watercolor-colorful-background_23-2149108517.jpg");
+  padding: 20px 30px;
+  border-radius: 20px;   
+  text-shadow: 5px 5px blue;
+}

@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.sticker {
+  display: inline-block; 
+  vertical-align: top;
+  text-align: center;
+  margin: 5px;
+}
+
+#ua{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Courier New";
+  background: linear-gradient(#fff700,#006eff);
+  padding: 50px  30px;
+  border-radius: 20px;
+}
+
+#web{
+  font-size: 40px;
+  font-family: "Impact";
+text-shadow: 2px 2px grey;
+  background: radial-gradient(#00ff91, #00e1ff, #0d35d3);
+  padding: 30px;
+  border-radius: 100px;
+}
+#image{
+  background: linear-gradient(to bottom left, #ff0088, #ff00dd, #000980);
+  border: 10px dashed pink;
+  outline: 4px solid violet;
+  outline-offset:2px;
+  position: relative;
+}
+
+#itext{
+  font-size: 20px;
+  font-family: "Impact";
+  position: absolute;
+  bottom: 10px;
+  left:10px;
+  transform: rotate(-15deg);
+}
